@@ -23,11 +23,11 @@ class _HomepageState extends State<Homepage> {
 
   //navigate to the different pages
   final List<Widget> _children = [
-    const UserHome(),
-    const UserSearch(),
-    const UserReels(),
-    const UserShop(),
-    const UserAccount(),
+    UserHome(),
+    UserSearch(),
+    UserReels(),
+    UserShop(),
+    UserAccount(),
   ];
 
   @override
