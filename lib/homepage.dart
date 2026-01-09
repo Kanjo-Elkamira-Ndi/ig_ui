@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'pages/home.dart';
+import 'pages/search.dart';
+import 'pages/reels.dart';
+import 'pages/shop.dart';
+import 'pages/account.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -18,11 +23,11 @@ class _HomepageState extends State<Homepage> {
 
   //navigate to the different pages
   final List<Widget> _children = [
-    Center(child: Text("Home")),
-    Center(child: Text("Search")),
-    Center(child: Text("Reels")),
-    Center(child: Text("Shop")),
-    Center(child: Text("Account")),
+    const UserHome(),
+    const UserSearch(),
+    const UserReels(),
+    const UserShop(),
+    const UserAccount(),
   ];
 
   @override
