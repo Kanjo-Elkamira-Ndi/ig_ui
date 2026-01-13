@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ig_ui/util/bubble_stories.dart';
+import 'package:ig_ui/util/user_post.dart';
 
 class UserHome extends StatelessWidget {
   final List people = ['Alchemy', 'Electro', 'Codes', 'Vicki', 'Mercy', 'Mimi'];
@@ -41,6 +42,8 @@ class UserHome extends StatelessWidget {
               },
             ),
           ),
+          //Post
+          UserPosts(name: "Alchemy"),
         ],
       ),
     );
