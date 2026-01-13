@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ig_ui/util/bubble_stories.dart';
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});
@@ -27,7 +28,19 @@ class UserHome extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(child: Text("Home")),
+      body: Column(
+        children: [
+          //Stories
+          Row(
+            children: [
+              BubbleStories(text: "Alchemy"),
+              BubbleStories(text: "Electro"),
+              BubbleStories(text: "Codes"),
+              BubbleStories(text: "Alchemy"),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
