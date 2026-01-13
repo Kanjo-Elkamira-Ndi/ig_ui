@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ig_ui/util/bubble_stories.dart';
 
 class UserHome extends StatelessWidget {
-  const UserHome({super.key});
+  final List people = ['Alchemy', 'Electro', 'Codes', 'Vicki', 'Mercy', 'Mimi'];
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +31,15 @@ class UserHome extends StatelessWidget {
       body: Column(
         children: [
           //Stories
-          Row(
-            children: [
-              BubbleStories(text: "Alchemy"),
-              BubbleStories(text: "Electro"),
-              BubbleStories(text: "Codes"),
-              BubbleStories(text: "Alchemy"),
-            ],
+          Container(
+            height: 130,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: people.length,
+              itemBuilder: (context, index) {
+                return BubbleStories(text: people[index]);
+              },
+            ),
           ),
         ],
       ),
